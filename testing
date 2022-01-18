@@ -1,0 +1,27 @@
+class BankAccount(object):
+    def __init__(self,name=None,accountNo=None,balance=0):
+        self.name=name
+        self.accountNo=accountNo
+        self.balance=balance
+
+    def balanceInquiry(self):
+        print('Your account balance is :' , self.balance)
+    
+    def withdraw(self,ammount):
+        self.balance = self.balance - ammount
+        print("Your remaining balance is :",self.balance)
+
+    def deposition(self,amount2):
+        self.balance = self.balance + amount2
+        print("Your balance is :",self.balance)
+
+
+
+tejasv = BankAccount(name='tejasv',accountNo=45644678,balance=10000000000)
+
+tejasv.balanceInquiry()
+tejasv.withdraw(10000)
+tejasv.deposition(100000)
+
+
+
